@@ -1,38 +1,250 @@
+/* Base styles */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #020230;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url('./Assets/bg.jpg') center;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+}
+
+.bottom {
+  height: 50%;
+}
+
+.Quiz {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  border: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
   }
-  to {
-    transform: rotate(360deg);
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: crimson;
+  }
+}
+
+.money {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.money-list {
+  list-style-type: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.money-l-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.money-l-item.active {
+  background-color: teal;
+}
+
+.money-item-num {
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
+}
+
+.money-item-amount {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.end-txt {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.Start{
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  text-align: center;
+}
+
+.start-data{
+  margin-top: 10rem;
+}
+
+.start-ip {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.start-ip:focus {
+  outline: none;
+}
+
+.start-btn {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .answer {
+    width: 90%; /* Adjust based on your design */
+  }
+
+  .question {
+    width: 90%; /* Adjust based on your design */
+  }
+}
+
+/* 481px - 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .answer {
+    width: 70%; /* Adjust based on your design */
+  }
+
+  .question {
+    width: 70%; /* Adjust based on your design */
+  }
+}
+
+/* 769px - 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .answer {
+    width: 50%; /* Adjust based on your design */
+  }
+
+  .question {
+    width: 60%; /* Adjust based on your design */
+  }
+}
+
+/* 1025px - 1200px */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .answer {
+    width: 40%; /* Adjust based on your design */
+  }
+
+  .question {
+    width: 50%; /* Adjust based on your design */
   }
 }
