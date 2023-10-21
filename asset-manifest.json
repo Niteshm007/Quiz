@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quiz/static/css/main.b5154665.css",
-    "main.js": "/Quiz/static/js/main.34c474c1.js",
+    "main.css": "/Quiz/static/css/main.441a3745.css",
+    "main.js": "/Quiz/static/js/main.5fd940f9.js",
     "static/js/845.35ac1279.chunk.js": "/Quiz/static/js/845.35ac1279.chunk.js",
     "static/js/787.9e90ff23.chunk.js": "/Quiz/static/js/787.9e90ff23.chunk.js",
     "static/media/bg.jpg": "/Quiz/static/media/bg.c137ccd722d64133b4df.jpg",
@@ -9,13 +9,13 @@
     "static/media/Correct.mp3": "/Quiz/static/media/Correct.160572d72c858155072e.mp3",
     "static/media/Wrong.mp3": "/Quiz/static/media/Wrong.e946821894ae9b0a0d6f.mp3",
     "index.html": "/Quiz/index.html",
-    "main.b5154665.css.map": "/Quiz/static/css/main.b5154665.css.map",
-    "main.34c474c1.js.map": "/Quiz/static/js/main.34c474c1.js.map",
+    "main.441a3745.css.map": "/Quiz/static/css/main.441a3745.css.map",
+    "main.5fd940f9.js.map": "/Quiz/static/js/main.5fd940f9.js.map",
     "845.35ac1279.chunk.js.map": "/Quiz/static/js/845.35ac1279.chunk.js.map",
     "787.9e90ff23.chunk.js.map": "/Quiz/static/js/787.9e90ff23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5154665.css",
-    "static/js/main.34c474c1.js"
+    "static/css/main.441a3745.css",
+    "static/js/main.5fd940f9.js"
   ]
 }
